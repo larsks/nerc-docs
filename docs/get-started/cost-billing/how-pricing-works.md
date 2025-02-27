@@ -32,9 +32,9 @@ and billing model.
 
 | Name         | vGPU | vCPU | RAM (GiB) | Current Price |
 | ------------ | ---- | ---- | --------- | ------------- |
-| H100 GPU     | 1    | 63   | 376       | $6.04         |
-| A100sxm4 GPU | 1    | 31   | 240       | $2.078        |
-| A100 GPU     | 1    | 24   | 74        | $1.803        |
+| H100 GPU     | {{su_info_dict["GPUH100"]["vGPUs"]}}    | {{su_info_dict["GPUH100"]["vCPUs"]}}   | {{su_info_dict["GPUH100"]["RAM"]}}       | ${{su_info_dict["GPUH100"]["rate"]}}        |
+| A100sxm4 GPU | {{su_info_dict["GPUA100SXM4"]["vGPUs"]}}    | {{su_info_dict["GPUA100SXM4"]["vCPUs"]}}   | {{su_info_dict["GPUA100SXM4"]["RAM"]}}       | ${{su_info_dict["GPUA100SXM4"]["rate"]}}        |
+| A100 GPU     | {{su_info_dict["GPUA100"]["vGPUs"]}}    | {{su_info_dict["GPUA100"]["vCPUs"]}}   | {{su_info_dict["GPUA100"]["RAM"]}}       | ${{su_info_dict["GPUA100"]["rate"]}}        |
 | V100 GPU     | 1    | 48   | 192       | $1.214        |
 | K80 GPU      | 1    | 6    | 28.5      | $0.463        |
 | CPU          | 0    | 1    | 4         | $0.013        |
@@ -60,9 +60,9 @@ of the base SU for the maximum resource they reserve.
 
 -   Will be charged:
 
-    `1 A100 GPU SUs x 200hrs (199.2 rounded up) x $1.803`
+    `1 A100 GPU SUs x 200hrs (199.2 rounded up) x ${{su_info_dict["GPUA100"]["rate"]}}`
 
-    `$360.60`
+    `${{su_info_dict["GPUA100"]["rate"] * 200}}`
 
 **OpenStack CPU SU Example:**
 
