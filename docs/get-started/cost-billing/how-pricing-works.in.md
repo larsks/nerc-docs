@@ -30,6 +30,7 @@ and billing model.
 
 ### Service Units (SUs)
 
+<!-- markdownlint-disable MD052 -->
 | Name         | vGPU | vCPU | RAM (GiB) | Current Price |
 | ------------ | ---- | ---- | --------- | ------------- |
 | H100 GPU     | {{su_info_dict["GPUH100"]["vGPUs"]}}    | {{su_info_dict["GPUH100"]["vCPUs"]}}   | {{su_info_dict["GPUH100"]["RAM"]}}       | ${{su_info_dict["GPUH100"]["rate"]}}        |
@@ -38,6 +39,7 @@ and billing model.
 | V100 GPU     | 1    | 48   | 192       | $1.214        |
 | K80 GPU      | 1    | 6    | 28.5      | $0.463        |
 | CPU          | 0    | 1    | 4         | $0.013        |
+<!-- markdownlint-enable MD052 -->
 
 !!! info "Expected Availability of H100 GPUs"
 

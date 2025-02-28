@@ -37,7 +37,7 @@ jobs:
                   git config user.name 'github-actions[bot]' && git config user.email 'github-actions[bot]@users.noreply.github.com'
             - name: Fetch nerc_rates and render Jinja templates
               run: |
-                  python scripts/add_nerc_rates.py
+                  make
             - name: Clean Build
               run: |
                   mkdocs build --clean
